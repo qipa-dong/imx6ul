@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "fsl_debug_console.h": "c",
+        "fsl_common.h": "c",
+        "ff.h": "c",
+        "integer.h": "c",
+        "windows.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "Disabled",
+    "C_Cpp.intelliSenseEngineFallback": "Disabled"
+}
