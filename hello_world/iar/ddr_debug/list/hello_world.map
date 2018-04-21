@@ -1,33 +1,33 @@
 ###############################################################################
 #
-# IAR ELF Linker V7.80.1.11864/W32 for ARM                11/Mar/2018  11:24:01
+# IAR ELF Linker V7.80.1.11864/W32 for ARM                22/Apr/2018  00:58:56
 # Copyright 2007-2016 IAR Systems AB.
 #
 #    Output file  =  
-#        C:\Users\qipq\Desktop\imx6_none\hello_world\iar\ddr_debug\hello_world.out
+#        C:\Users\lidong\Documents\GitHub\imx6ul\hello_world\iar\ddr_debug\hello_world.out
 #    Map file     =  
-#        C:\Users\qipq\Desktop\imx6_none\hello_world\iar\ddr_debug\list\hello_world.map
+#        C:\Users\lidong\Documents\GitHub\imx6ul\hello_world\iar\ddr_debug\list\hello_world.map
 #    Command line =  
-#        C:\Users\qipq\Desktop\imx6_none\hello_world\iar\ddr_debug\obj\board.o
-#        C:\Users\qipq\Desktop\imx6_none\hello_world\iar\ddr_debug\obj\clock_config.o
-#        C:\Users\qipq\Desktop\imx6_none\hello_world\iar\ddr_debug\obj\clock_config_ocram.o
-#        C:\Users\qipq\Desktop\imx6_none\hello_world\iar\ddr_debug\obj\fsl_clock.o
-#        C:\Users\qipq\Desktop\imx6_none\hello_world\iar\ddr_debug\obj\fsl_common.o
-#        C:\Users\qipq\Desktop\imx6_none\hello_world\iar\ddr_debug\obj\fsl_debug_console.o
-#        C:\Users\qipq\Desktop\imx6_none\hello_world\iar\ddr_debug\obj\fsl_io.o
-#        C:\Users\qipq\Desktop\imx6_none\hello_world\iar\ddr_debug\obj\fsl_log.o
-#        C:\Users\qipq\Desktop\imx6_none\hello_world\iar\ddr_debug\obj\fsl_str.o
-#        C:\Users\qipq\Desktop\imx6_none\hello_world\iar\ddr_debug\obj\fsl_uart.o
-#        C:\Users\qipq\Desktop\imx6_none\hello_world\iar\ddr_debug\obj\hello_world.o
-#        C:\Users\qipq\Desktop\imx6_none\hello_world\iar\ddr_debug\obj\pin_mux.o
-#        C:\Users\qipq\Desktop\imx6_none\hello_world\iar\ddr_debug\obj\startup_MCIMX6G2.o
-#        C:\Users\qipq\Desktop\imx6_none\hello_world\iar\ddr_debug\obj\system_MCIMX6G2.o
+#        C:\Users\lidong\Documents\GitHub\imx6ul\hello_world\iar\ddr_debug\obj\board.o
+#        C:\Users\lidong\Documents\GitHub\imx6ul\hello_world\iar\ddr_debug\obj\clock_config.o
+#        C:\Users\lidong\Documents\GitHub\imx6ul\hello_world\iar\ddr_debug\obj\clock_config_ocram.o
+#        C:\Users\lidong\Documents\GitHub\imx6ul\hello_world\iar\ddr_debug\obj\fsl_clock.o
+#        C:\Users\lidong\Documents\GitHub\imx6ul\hello_world\iar\ddr_debug\obj\fsl_common.o
+#        C:\Users\lidong\Documents\GitHub\imx6ul\hello_world\iar\ddr_debug\obj\fsl_debug_console.o
+#        C:\Users\lidong\Documents\GitHub\imx6ul\hello_world\iar\ddr_debug\obj\fsl_io.o
+#        C:\Users\lidong\Documents\GitHub\imx6ul\hello_world\iar\ddr_debug\obj\fsl_log.o
+#        C:\Users\lidong\Documents\GitHub\imx6ul\hello_world\iar\ddr_debug\obj\fsl_str.o
+#        C:\Users\lidong\Documents\GitHub\imx6ul\hello_world\iar\ddr_debug\obj\fsl_uart.o
+#        C:\Users\lidong\Documents\GitHub\imx6ul\hello_world\iar\ddr_debug\obj\hello_world.o
+#        C:\Users\lidong\Documents\GitHub\imx6ul\hello_world\iar\ddr_debug\obj\pin_mux.o
+#        C:\Users\lidong\Documents\GitHub\imx6ul\hello_world\iar\ddr_debug\obj\startup_MCIMX6G2.o
+#        C:\Users\lidong\Documents\GitHub\imx6ul\hello_world\iar\ddr_debug\obj\system_MCIMX6G2.o
 #        --redirect _Printf=_PrintfSmall --redirect _Scanf=_ScanfSmall -o
-#        C:\Users\qipq\Desktop\imx6_none\hello_world\iar\ddr_debug\hello_world.out
+#        C:\Users\lidong\Documents\GitHub\imx6ul\hello_world\iar\ddr_debug\hello_world.out
 #        --map
-#        C:\Users\qipq\Desktop\imx6_none\hello_world\iar\ddr_debug\list\hello_world.map
+#        C:\Users\lidong\Documents\GitHub\imx6ul\hello_world\iar\ddr_debug\list\hello_world.map
 #        --config
-#        C:\Users\qipq\Desktop\imx6_none\hello_world\iar\MCIMX6G2xxx05_ram.icf
+#        C:\Users\lidong\Documents\GitHub\imx6ul\hello_world\iar\MCIMX6G2xxx05_ram.icf
 #        --semihosting --entry __iar_program_start --vfe
 #
 ###############################################################################
@@ -207,7 +207,7 @@ Copy/lz77 (__iar_lz77_init3)
 
     Module                ro code  rw code  ro data  rw data
     ------                -------  -------  -------  -------
-C:\Users\qipq\Desktop\imx6_none\hello_world\iar\ddr_debug\obj: [1]
+C:\Users\lidong\Documents\GitHub\imx6ul\hello_world\iar\ddr_debug\obj: [1]
     board.o                 1 296                16   16 384
     clock_config.o            816               108
     clock_config_ocram.o             1 928      963
@@ -434,7 +434,7 @@ s_uartClock             0x81004eb4    0x14  Data  Lc  fsl_uart.o [1]
 strlen                  0x81003508          Code  Gb  strlen.o [5]
 
 
-[1] = C:\Users\qipq\Desktop\imx6_none\hello_world\iar\ddr_debug\obj
+[1] = C:\Users\lidong\Documents\GitHub\imx6ul\hello_world\iar\ddr_debug\obj
 [2] = command line
 [3] = dl7Sx_tln.a
 [4] = m7Sx_tlv.a

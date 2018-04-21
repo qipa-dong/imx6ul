@@ -2,7 +2,7 @@
 
 "--cpu=Cortex-A7" 
 
-"--jlink_script_file=C:\Users\qipq\Desktop\imx6_none\hello_world\iar/../ddr_init.jlinkscript" 
+"--jlink_script_file=C:\Users\lidong\Documents\GitHub\imx6ul\hello_world\iar/../ddr_init.jlinkscript" 
 
 "--fpu=VFPv4Neon" 
 

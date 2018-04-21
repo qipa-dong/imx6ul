@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"D:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\common\bin\cspybat" -f "C:\Users\qipq\Desktop\imx6_none\hello_world\iar\settings\hello_world.ddr_debug.general.xcl" --backend -f "C:\Users\qipq\Desktop\imx6_none\hello_world\iar\settings\hello_world.ddr_debug.driver.xcl" 
+"D:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\common\bin\cspybat" -f "C:\Users\lidong\Documents\GitHub\imx6ul\hello_world\iar\settings\hello_world.ddr_debug.general.xcl" --backend -f "C:\Users\lidong\Documents\GitHub\imx6ul\hello_world\iar\settings\hello_world.ddr_debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"D:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\common\bin\cspybat" -f "C:\Users\qipq\Desktop\imx6_none\hello_world\iar\settings\hello_world.ddr_debug.general.xcl" "--debug_file=%~1" --backend -f "C:\Users\qipq\Desktop\imx6_none\hello_world\iar\settings\hello_world.ddr_debug.driver.xcl" 
+"D:\Program Files (x86)\IAR Systems\Embedded Workbench 7.5\common\bin\cspybat" -f "C:\Users\lidong\Documents\GitHub\imx6ul\hello_world\iar\settings\hello_world.ddr_debug.general.xcl" "--debug_file=%~1" --backend -f "C:\Users\lidong\Documents\GitHub\imx6ul\hello_world\iar\settings\hello_world.ddr_debug.driver.xcl" 
 
 @echo off 
 :end
