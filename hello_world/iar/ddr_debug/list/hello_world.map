@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V7.80.1.11864/W32 for ARM                22/Apr/2018  00:58:56
+# IAR ELF Linker V7.80.1.11864/W32 for ARM                26/Apr/2018  00:18:12
 # Copyright 2007-2016 IAR Systems AB.
 #
 #    Output file  =  
@@ -84,7 +84,7 @@ initialize by copy {
   .rodata            const    0x8100203c     0x0  zero_init3.o [5]
   .rodata            const    0x8100203c     0x0  lz77_init.o [5]
 
-"P4", part 2 of 2:                        0x32b1
+"P4", part 2 of 2:                        0x32d9
   .text              ro code  0x81002040   0x91c  fsl_uart.o [1]
   .text              ro code  0x8100295c    0x30  fsl_common.o [1]
   .text              ro code  0x8100298c   0x130  I64DivMod.o [5]
@@ -111,44 +111,44 @@ initialize by copy {
   .text              ro code  0x810048e0    0xfc  pin_mux.o [1]
   .text              ro code  0x810049dc    0x6c  startup_MCIMX6G2.o [1]
   .text              ro code  0x81004a48    0x5c  startup_MCIMX6G2.o [1]
-  .rodata            const    0x81004aa4    0x48  clock_config.o [1]
-  .rodata            const    0x81004aec    0x48  fsl_log.o [1]
-  .rodata            const    0x81004b34    0x48  fsl_uart.o [1]
-  .rodata            const    0x81004b7c    0x48  fsl_uart.o [1]
-  .rodata            const    0x81004bc4    0x44  fsl_uart.o [1]
-  .rodata            const    0x81004c08    0x44  fsl_uart.o [1]
-  .rodata            const    0x81004c4c    0x40  fsl_uart.o [1]
-  .text              ro code  0x81004c8c    0x40  zero_init3.o [5]
-  .text              ro code  0x81004ccc    0x38  hello_world.o [1]
-  .rodata            const    0x81004d04    0x30  fsl_uart.o [1]
-  .text              ro code  0x81004d34    0x30  data_init.o [5]
-  .rodata            const    0x81004d64    0x2c  fsl_common.o [1]
-  .text              ro code  0x81004d90    0x2c  cmain.o [5]
-  .text              ro code  0x81004dbc     0x4  low_level_init.o [3]
-  Veneer             ro code  0x81004dc0     0x8  - Linker created -
-  .text              ro code  0x81004dc8     0x4  exit.o [3]
-  .text              ro code  0x81004dcc    0x10  cexit.o [5]
-  .text              ro code  0x81004ddc    0x28  fpinit.o [4]
-  .rodata            const    0x81004e04    0x24  fsl_uart.o [1]
-  .iar.init_table    const    0x81004e28    0x50  - Linker created -
-  .rodata            const    0x81004e78    0x20  clock_config.o [1]
-  .rodata            const    0x81004e98    0x1c  fsl_uart.o [1]
-  .rodata            const    0x81004eb4    0x14  fsl_uart.o [1]
-  .rodata            const    0x81004ec8    0x10  fsl_clock.o [1]
-  .rodata            const    0x81004ed8    0x10  hello_world.o [1]
-  .rodata            const    0x81004ee8     0xc  fsl_log.o [1]
-  .rodata            const    0x81004ef4     0xc  fsl_uart.o [1]
-  .rodata            const    0x81004f00     0x8  fsl_uart.o [1]
-  .rodata            const    0x81004f08     0x8  fsl_uart.o [1]
-  .rodata            const    0x81004f10     0x4  board.o [1]
-  .rodata            const    0x81004f14     0x4  board.o [1]
-  .rodata            const    0x81004f18     0x4  board.o [1]
-  .rodata            const    0x81004f1c     0x4  board.o [1]
-  .rodata            const    0x81004f20     0x4  clock_config.o [1]
-  .text              ro code  0x81004f24     0x4  xreturnswi.o [6]
-  Initializer bytes  const    0x81004f28     0x6  <for RW-1>
-  Initializer bytes  const    0x81004f2e   0x3c3  <for P2 s0>
-                            - 0x810052f1  0x32b1
+  .rodata            const    0x81004aa4    0x50  clock_config.o [1]
+  .rodata            const    0x81004af4    0x50  fsl_log.o [1]
+  .rodata            const    0x81004b44    0x50  fsl_uart.o [1]
+  .rodata            const    0x81004b94    0x4c  fsl_uart.o [1]
+  .rodata            const    0x81004be0    0x4c  fsl_uart.o [1]
+  .rodata            const    0x81004c2c    0x48  fsl_uart.o [1]
+  .rodata            const    0x81004c74    0x40  fsl_uart.o [1]
+  .text              ro code  0x81004cb4    0x40  zero_init3.o [5]
+  .text              ro code  0x81004cf4    0x38  hello_world.o [1]
+  .rodata            const    0x81004d2c    0x30  fsl_uart.o [1]
+  .text              ro code  0x81004d5c    0x30  data_init.o [5]
+  .rodata            const    0x81004d8c    0x2c  fsl_common.o [1]
+  .text              ro code  0x81004db8    0x2c  cmain.o [5]
+  .text              ro code  0x81004de4     0x4  low_level_init.o [3]
+  Veneer             ro code  0x81004de8     0x8  - Linker created -
+  .text              ro code  0x81004df0     0x4  exit.o [3]
+  .text              ro code  0x81004df4    0x10  cexit.o [5]
+  .text              ro code  0x81004e04    0x28  fpinit.o [4]
+  .rodata            const    0x81004e2c    0x24  fsl_uart.o [1]
+  .iar.init_table    const    0x81004e50    0x50  - Linker created -
+  .rodata            const    0x81004ea0    0x20  clock_config.o [1]
+  .rodata            const    0x81004ec0    0x1c  fsl_uart.o [1]
+  .rodata            const    0x81004edc    0x14  fsl_uart.o [1]
+  .rodata            const    0x81004ef0    0x10  fsl_clock.o [1]
+  .rodata            const    0x81004f00    0x10  hello_world.o [1]
+  .rodata            const    0x81004f10     0xc  fsl_log.o [1]
+  .rodata            const    0x81004f1c     0xc  fsl_uart.o [1]
+  .rodata            const    0x81004f28     0x8  fsl_uart.o [1]
+  .rodata            const    0x81004f30     0x8  fsl_uart.o [1]
+  .rodata            const    0x81004f38     0x4  board.o [1]
+  .rodata            const    0x81004f3c     0x4  board.o [1]
+  .rodata            const    0x81004f40     0x4  board.o [1]
+  .rodata            const    0x81004f44     0x4  board.o [1]
+  .rodata            const    0x81004f48     0x4  clock_config.o [1]
+  .text              ro code  0x81004f4c     0x4  xreturnswi.o [6]
+  Initializer bytes  const    0x81004f50     0x6  <for RW-1>
+  Initializer bytes  const    0x81004f56   0x3c3  <for P2 s0>
+                            - 0x81005319  0x32d9
 
 "P6-P7", part 1 of 2:                        0x4
   RW                          0x81400000     0x4  <Block>
@@ -189,13 +189,13 @@ Zero (__iar_zero_init3)
 
 Copy/lz77 (__iar_lz77_init3)
     1 source range, total size 0x6 (150% of destination):
-          0x81004f28     0x6
+          0x81004f50     0x6
     1 destination range, total size 0x4:
           0x81400000     0x4
 
 Copy/lz77 (__iar_lz77_init3)
     1 source range, total size 0x3c3 (49% of destination):
-          0x81004f2e   0x3c3
+          0x81004f56   0x3c3
     1 destination range, total size 0x788:
           0x00904000   0x788
 
@@ -209,21 +209,21 @@ Copy/lz77 (__iar_lz77_init3)
     ------                -------  -------  -------  -------
 C:\Users\lidong\Documents\GitHub\imx6ul\hello_world\iar\ddr_debug\obj: [1]
     board.o                 1 296                16   16 384
-    clock_config.o            816               108
+    clock_config.o            816               116
     clock_config_ocram.o             1 928      963
     fsl_clock.o               924                16        8
     fsl_common.o               48                44
     fsl_debug_console.o       204
     fsl_io.o                  264                          4
-    fsl_log.o                 336                84
+    fsl_log.o                 336                92
     fsl_str.o               1 380
-    fsl_uart.o              2 332               504
+    fsl_uart.o              2 332               528
     hello_world.o              56                16
     pin_mux.o                 252
     startup_MCIMX6G2.o        260
     system_MCIMX6G2.o       1 164                 6    1 288
     --------------------------------------------------------
-    Total:                  9 332    1 928    1 757   17 684
+    Total:                  9 332    1 928    1 797   17 684
 
 command line: [2]
     --------------------------------------------------------
@@ -267,7 +267,7 @@ sh7Sxs_l.a: [6]
 
     Linker created             16                80    2 304
 ------------------------------------------------------------
-    Grand Total:           11 200    1 928    1 837   19 988
+    Grand Total:           11 200    1 928    1 877   19 988
 
 
 *******************************************************************************
@@ -276,9 +276,9 @@ sh7Sxs_l.a: [6]
 
 Entry                      Address    Size  Type      Object
 -----                      -------    ----  ----      ------
-.iar.init_table$$Base   0x81004e28           --   Gb  - Linker created -
-.iar.init_table$$Limit  0x81004e78           --   Gb  - Linker created -
-?main                   0x81004d90          Code  Gb  cmain.o [5]
+.iar.init_table$$Base   0x81004e50           --   Gb  - Linker created -
+.iar.init_table$$Limit  0x81004ea0           --   Gb  - Linker created -
+?main                   0x81004db8          Code  Gb  cmain.o [5]
 BOARD_BootClockGate     0x81004564    0x6c  Code  Lc  clock_config.o [1]
 BOARD_BootClockRUN      0x810045d0    0xdc  Code  Gb  clock_config.o [1]
 BOARD_DebugConsoleSrcFreq
@@ -343,8 +343,8 @@ RSTACK$$Base            0x0091ff00           --   Gb  - Linker created -
 RSTACK$$Limit           0x00920000           --   Gb  - Linker created -
 RW$$Base                0x81400000           --   Gb  - Linker created -
 RW$$Limit               0x81400004           --   Gb  - Linker created -
-Region$$Table$$Base     0x81004e28           --   Gb  - Linker created -
-Region$$Table$$Limit    0x81004e78           --   Gb  - Linker created -
+Region$$Table$$Base     0x81004e50           --   Gb  - Linker created -
+Region$$Table$$Limit    0x81004ea0           --   Gb  - Linker created -
 StrFormatPrintf         0x81002fb8   0x40c  Code  Gb  fsl_str.o [1]
 SystemCoreClock         0x81400000     0x4  Data  Gb  system_MCIMX6G2.o [1]
 SystemCoreClockUpdate   0x810041ec   0x11c  Code  Gb  system_MCIMX6G2.o [1]
@@ -383,7 +383,7 @@ __aeabi_memset          0x81003a6c          Code  Gb  ABImemset.o [5]
 __aeabi_uidiv           0x81002b88          Code  Gb  I32DivMod.o [5]
 __aeabi_uidivmod        0x81002b88          Code  Gb  I32DivMod.o [5]
 __aeabi_uldivmod        0x8100298c          Code  Gb  I64DivMod.o [5]
-__cmain                 0x81004d90          Code  Gb  cmain.o [5]
+__cmain                 0x81004db8          Code  Gb  cmain.o [5]
 __exit                  0x810048cd    0x14  Code  Gb  exit.o [6]
 __get_ACTLR             0x81003f50     0x8  Code  Lc  system_MCIMX6G2.o [1]
 __get_CBAR              0x81003f78     0x8  Code  Lc  system_MCIMX6G2.o [1]
@@ -395,14 +395,14 @@ __iar_Memset            0x81003a6c          Code  Gb  ABImemset.o [5]
 __iar_Memset4_word      0x810034d0          Code  Gb  ABImemset48.o [5]
 __iar_Memset8_word      0x810034d0          Code  Gb  ABImemset48.o [5]
 __iar_Memset_word       0x81003a74          Code  Gb  ABImemset.o [5]
-__iar_data_init3        0x81004d35    0x30  Code  Gb  data_init.o [5]
-__iar_init_vfp          0x81004df0          Code  Gb  fpinit.o [4]
-__iar_init_vfp_v6       0x81004ddc          Code  Gb  fpinit.o [4]
+__iar_data_init3        0x81004d5d    0x30  Code  Gb  data_init.o [5]
+__iar_init_vfp          0x81004e18          Code  Gb  fpinit.o [4]
+__iar_init_vfp_v6       0x81004e04          Code  Gb  fpinit.o [4]
 __iar_lz77_init3        0x8100476b   0x15c  Code  Gb  lz77_init.o [5]
 __iar_program_start     0x81004a48          Code  Gb  startup_MCIMX6G2.o [1]
-__iar_return_from_swi   0x81004f24     0x4  Code  Gb  xreturnswi.o [6]
-__iar_zero_init3        0x81004c8d    0x40  Code  Gb  zero_init3.o [5]
-__low_level_init        0x81004dbd     0x4  Code  Gb  low_level_init.o [3]
+__iar_return_from_swi   0x81004f4c     0x4  Code  Gb  xreturnswi.o [6]
+__iar_zero_init3        0x81004cb5    0x40  Code  Gb  zero_init3.o [5]
+__low_level_init        0x81004de5     0x4  Code  Gb  low_level_init.o [3]
 __set_ACTLR             0x81003f58     0x8  Code  Lc  system_MCIMX6G2.o [1]
 __set_CPACR             0x81003f68     0x8  Code  Lc  system_MCIMX6G2.o [1]
 __set_DACR              0x8100357c     0x8  Code  Lc  board.o [1]
@@ -413,24 +413,24 @@ __set_TTBCR             0x81003574     0x8  Code  Lc  board.o [1]
 __set_TTBR0             0x8100356c     0x8  Code  Lc  board.o [1]
 __set_VBAR              0x81003f70     0x8  Code  Lc  system_MCIMX6G2.o [1]
 __vector_table          0x81002000          Data  Gb  startup_MCIMX6G2.o [1]
-_call_main              0x81004da4          Code  Gb  cmain.o [5]
-_exit                   0x81004dcc          Code  Gb  cexit.o [5]
-_main                   0x81004dac          Code  Gb  cmain.o [5]
+_call_main              0x81004dcc          Code  Gb  cmain.o [5]
+_exit                   0x81004df4          Code  Gb  cexit.o [5]
+_main                   0x81004dd4          Code  Gb  cmain.o [5]
 abort                   0x810048c7     0x6  Code  Gb  abort.o [3]
-exit                    0x81004dc9     0x4  Code  Gb  exit.o [3]
-g_ccmConfigArmPll       0x81004f20     0x4  Data  Gb  clock_config.o [1]
+exit                    0x81004df1     0x4  Code  Gb  exit.o [3]
+g_ccmConfigArmPll       0x81004f48     0x4  Data  Gb  clock_config.o [1]
 g_rtcXtalFreq           0x81400008     0x4  Data  Gb  fsl_clock.o [1]
 g_xtalFreq              0x81400004     0x4  Data  Gb  fsl_clock.o [1]
 irqNesting              0x81400510     0x4  Data  Lc  system_MCIMX6G2.o [1]
 irqTable                0x81400010   0x500  Data  Lc  system_MCIMX6G2.o [1]
-main                    0x81004ccc    0x38  Code  Gb  hello_world.o [1]
+main                    0x81004cf4    0x38  Code  Gb  hello_world.o [1]
 s_debugConsoleIO        0x8140000c     0x4  Data  Lc  fsl_io.o [1]
-s_mmuBufferAttr         0x81004f1c     0x4  Data  Lc  board.o [1]
-s_mmuDevAttr            0x81004f10     0x4  Data  Lc  board.o [1]
-s_mmuRamAttr            0x81004f18     0x4  Data  Lc  board.o [1]
-s_mmuRomAttr            0x81004f14     0x4  Data  Lc  board.o [1]
-s_uartBases             0x81004e04    0x24  Data  Lc  fsl_uart.o [1]
-s_uartClock             0x81004eb4    0x14  Data  Lc  fsl_uart.o [1]
+s_mmuBufferAttr         0x81004f44     0x4  Data  Lc  board.o [1]
+s_mmuDevAttr            0x81004f38     0x4  Data  Lc  board.o [1]
+s_mmuRamAttr            0x81004f40     0x4  Data  Lc  board.o [1]
+s_mmuRomAttr            0x81004f3c     0x4  Data  Lc  board.o [1]
+s_uartBases             0x81004e2c    0x24  Data  Lc  fsl_uart.o [1]
+s_uartClock             0x81004edc    0x14  Data  Lc  fsl_uart.o [1]
 strlen                  0x81003508          Code  Gb  strlen.o [5]
 
 
@@ -443,7 +443,7 @@ strlen                  0x81003508          Code  Gb  strlen.o [5]
 
   11 200 bytes of readonly  code memory
    1 928 bytes of readwrite code memory
-   1 837 bytes of readonly  data memory
+   1 877 bytes of readonly  data memory
   19 988 bytes of readwrite data memory
 
 Errors: none
