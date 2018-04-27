@@ -1,0 +1,572 @@
+###############################################################################
+#
+# IAR ELF Linker V7.80.1.11864/W32 for ARM                28/Apr/2018  00:50:41
+# Copyright 2007-2016 IAR Systems AB.
+#
+#    Output file  =  
+#        C:\Users\lidong\Documents\GitHub\imx6ul\gpio\input_interrupt\iar\ddr_debug\igpio_input_interrupt.out
+#    Map file     =  
+#        C:\Users\lidong\Documents\GitHub\imx6ul\gpio\input_interrupt\iar\ddr_debug\list\igpio_input_interrupt.map
+#    Command line =  
+#        C:\Users\lidong\Documents\GitHub\imx6ul\gpio\input_interrupt\iar\ddr_debug\obj\board.o
+#        C:\Users\lidong\Documents\GitHub\imx6ul\gpio\input_interrupt\iar\ddr_debug\obj\clock_config.o
+#        C:\Users\lidong\Documents\GitHub\imx6ul\gpio\input_interrupt\iar\ddr_debug\obj\clock_config_ocram.o
+#        C:\Users\lidong\Documents\GitHub\imx6ul\gpio\input_interrupt\iar\ddr_debug\obj\fsl_clock.o
+#        C:\Users\lidong\Documents\GitHub\imx6ul\gpio\input_interrupt\iar\ddr_debug\obj\fsl_common.o
+#        C:\Users\lidong\Documents\GitHub\imx6ul\gpio\input_interrupt\iar\ddr_debug\obj\fsl_debug_console.o
+#        C:\Users\lidong\Documents\GitHub\imx6ul\gpio\input_interrupt\iar\ddr_debug\obj\fsl_gpio.o
+#        C:\Users\lidong\Documents\GitHub\imx6ul\gpio\input_interrupt\iar\ddr_debug\obj\fsl_io.o
+#        C:\Users\lidong\Documents\GitHub\imx6ul\gpio\input_interrupt\iar\ddr_debug\obj\fsl_log.o
+#        C:\Users\lidong\Documents\GitHub\imx6ul\gpio\input_interrupt\iar\ddr_debug\obj\fsl_str.o
+#        C:\Users\lidong\Documents\GitHub\imx6ul\gpio\input_interrupt\iar\ddr_debug\obj\fsl_uart.o
+#        C:\Users\lidong\Documents\GitHub\imx6ul\gpio\input_interrupt\iar\ddr_debug\obj\gpio_input_interrupt.o
+#        C:\Users\lidong\Documents\GitHub\imx6ul\gpio\input_interrupt\iar\ddr_debug\obj\pin_mux.o
+#        C:\Users\lidong\Documents\GitHub\imx6ul\gpio\input_interrupt\iar\ddr_debug\obj\startup_MCIMX6G2.o
+#        C:\Users\lidong\Documents\GitHub\imx6ul\gpio\input_interrupt\iar\ddr_debug\obj\system_MCIMX6G2.o
+#        --redirect _Printf=_PrintfSmall --redirect _Scanf=_ScanfSmall -o
+#        C:\Users\lidong\Documents\GitHub\imx6ul\gpio\input_interrupt\iar\ddr_debug\igpio_input_interrupt.out
+#        --map
+#        C:\Users\lidong\Documents\GitHub\imx6ul\gpio\input_interrupt\iar\ddr_debug\list\igpio_input_interrupt.map
+#        --config
+#        C:\Users\lidong\Documents\GitHub\imx6ul\gpio\input_interrupt\iar/MCIMX6G3xxx05_ram.icf
+#        --semihosting --entry __iar_program_start --vfe
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__Heap_Handler  = DLMalloc
+__SystemLibrary = DLib
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x80002000 { ro section .intvec };
+"P1":  place in [from 0x00900000 to 0x0091feff] { first section OcramData };
+"P2":  place in [from 0x00900000 to 0x0091feff] {
+          rw object clock_config_ocram.o };
+"P3":  place in [from 0x0091ff00 to 0x0091ffff] { block RSTACK };
+"P4":  place in [from 0x80002000 to 0x8000203f] |
+                [from 0x80002040 to 0x803fffff] { ro };
+"P6":  place in [from 0x80400000 to 0x807ff7ff] { block RW };
+"P7":  place in [from 0x80400000 to 0x807ff7ff] { block ZI };
+"P9":  place in [from 0x807ff800 to 0x807ffbff] { block CSTACK };
+"P10": place in [from 0x807ffc00 to 0x807fffff] { block ISTACK };
+initialize by copy {
+   rw, section .textrw, object clock_config_ocram.o section .text,
+   object clock_config_ocram.o section .rodata };
+
+  Section               Kind        Address    Size  Object
+  -------               ----        -------    ----  ------
+"P1":                                        0x4000
+  OcramData             zero     0x00900000  0x4000  board.o [1]
+                               - 0x00904000  0x4000
+
+"P2":                                         0x4a0
+  P2 s0                          0x00904000   0x4a0  <Init block>
+    .text               inited   0x00904000   0x4a0  clock_config_ocram.o [1]
+                               - 0x009044a0   0x4a0
+
+"P3":                                         0x100
+  RSTACK                         0x0091ff00   0x100  <Block>
+    RSTACK              uninit   0x0091ff00   0x100  <Block tail>
+                               - 0x00920000   0x100
+
+"A0":                                          0x3c
+  .intvec               ro code  0x80002000    0x3c  startup_MCIMX6G2.o [1]
+                               - 0x8000203c    0x3c
+
+"P4", part 1 of 2:                              0x0
+  .rodata               const    0x8000203c     0x0  zero_init3.o [5]
+  .rodata               const    0x8000203c     0x0  copy_init3.o [5]
+
+"P4", part 2 of 2:                           0x3db4
+  .text                 ro code  0x80002040   0x5f4  fsl_uart.o [1]
+  .text                 ro code  0x80002634    0x1c  fsl_common.o [1]
+  .text                 ro code  0x80002650   0x130  I64DivMod.o [5]
+  .text                 ro code  0x80002780    0x58  fsl_debug_console.o [1]
+  .text                 ro code  0x800027d8   0x17c  I32DivMod.o [5]
+  .text                 ro code  0x80002954     0x4  I64DivZer.o [5]
+  .text                 ro code  0x80002958    0x50  fsl_log.o [1]
+  .text                 ro code  0x800029a8     0x8  ABImemclr4.o [5]
+  .text                 ro code  0x800029b0   0x558  fsl_str.o [1]
+  .text                 ro code  0x80002f08     0x4  IntDivZer.o [5]
+  .text                 ro code  0x80002f0c    0x90  fsl_io.o [1]
+  .text                 ro code  0x80002f9c    0x38  ABImemset48.o [5]
+  .text                 ro code  0x80002fd4    0xc0  modf.o [4]
+  .text                 ro code  0x80003094   0x45c  pow.o [4]
+  .text                 ro code  0x800034f0    0x7a  DblToI64.o [4]
+  .text                 ro code  0x8000356c    0x58  I64ToDbl.o [4]
+  .text                 ro code  0x800035c4    0x54  strlen.o [5]
+  .text                 ro code  0x80003618    0x44  xdnorm.o [4]
+  .text                 ro code  0x8000365c    0x7e  xdint.o [4]
+  .text                 ro code  0x800036da     0xc  errno.o [3]
+  .text                 ro code  0x800036e6    0xaa  xlog.o [4]
+  .text                 ro code  0x80003790   0x298  xexp.o [4]
+  .text                 ro code  0x80003a28     0xe  U32ToDbl.o [4]
+  .text                 ro code  0x80003a36     0x2  xtls.o [3]
+  .text                 ro code  0x80003a38    0x46  xdtest.o [4]
+  .text                 ro code  0x80003a7e   0x110  xdscale.o [4]
+  .text                 ro code  0x80003b90   0x518  system_MCIMX6G2.o [1]
+  .rodata               const    0x800040a8   0x420  pow.o [4]
+  .text                 ro code  0x800044c8   0x390  board.o [1]
+  .text                 ro code  0x80004858    0x74  ABImemset.o [5]
+  .text                 ro code  0x800048cc   0x294  fsl_clock.o [1]
+  .text                 ro code  0x80004b60    0xb0  ABImemcpy.o [5]
+  Veneer                ro code  0x80004c10     0x8  - Linker created -
+  .text                 ro code  0x80004c18   0x238  clock_config.o [1]
+  .text                 ro code  0x80004e50   0x1e0  fsl_gpio.o [1]
+  .text                 ro code  0x80005030   0x140  gpio_input_interrupt.o [1]
+  .text                 ro code  0x80005170    0xd0  pin_mux.o [1]
+  .rodata               const    0x80005240    0x70  gpio_input_interrupt.o [1]
+  .text                 ro code  0x800052b0    0x6c  startup_MCIMX6G2.o [1]
+  .text                 ro code  0x8000531c    0x5c  startup_MCIMX6G2.o [1]
+  .rodata               const    0x80005378    0x50  clock_config.o [1]
+  .rodata               const    0x800053c8    0x50  fsl_gpio.o [1]
+  .rodata               const    0x80005418    0x50  fsl_log.o [1]
+  .rodata               const    0x80005468    0x50  fsl_uart.o [1]
+  .rodata               const    0x800054b8    0x4c  fsl_gpio.o [1]
+  .rodata               const    0x80005504    0x4c  fsl_uart.o [1]
+  .rodata               const    0x80005550    0x4c  fsl_uart.o [1]
+  .rodata               const    0x8000559c    0x48  fsl_uart.o [1]
+  .rodata               const    0x800055e4    0x40  fsl_uart.o [1]
+  .text                 ro code  0x80005624    0x40  zero_init3.o [5]
+  .rodata               const    0x80005664    0x30  fsl_uart.o [1]
+  .text                 ro code  0x80005694    0x30  data_init.o [5]
+  .rodata               const    0x800056c4    0x2c  fsl_common.o [1]
+  .text                 ro code  0x800056f0    0x2c  cmain.o [5]
+  .text                 ro code  0x8000571c     0x4  low_level_init.o [3]
+  Veneer                ro code  0x80005720     0x8  - Linker created -
+  .text                 ro code  0x80005728     0x4  exit.o [3]
+  .text                 ro code  0x8000572c    0x14  exit.o [6]
+  .text                 ro code  0x80005740    0x10  cexit.o [5]
+  .text                 ro code  0x80005750    0x2c  copy_init3.o [5]
+  .text                 ro code  0x8000577c    0x28  fpinit.o [4]
+  .rodata               const    0x800057a4    0x24  fsl_gpio.o [1]
+  .rodata               const    0x800057c8    0x24  fsl_uart.o [1]
+  .iar.init_table       const    0x800057ec    0x40  - Linker created -
+  .rodata               const    0x8000582c    0x20  clock_config.o [1]
+  .rodata               const    0x8000584c    0x1c  fsl_uart.o [1]
+  .rodata               const    0x80005868    0x18  fsl_gpio.o [1]
+  .rodata               const    0x80005880    0x18  gpio_input_interrupt.o [1]
+  .rodata               const    0x80005898    0x14  fsl_uart.o [1]
+  .rodata               const    0x800058ac    0x14  gpio_input_interrupt.o [1]
+  .rodata               const    0x800058c0    0x10  fsl_clock.o [1]
+  .rodata               const    0x800058d0     0xc  fsl_gpio.o [1]
+  .rodata               const    0x800058dc     0xc  fsl_gpio.o [1]
+  .rodata               const    0x800058e8     0xc  fsl_gpio.o [1]
+  .rodata               const    0x800058f4     0xc  fsl_log.o [1]
+  .rodata               const    0x80005900     0xc  fsl_uart.o [1]
+  .rodata               const    0x8000590c     0xc  gpio_input_interrupt.o [1]
+  .rodata               const    0x80005918     0x8  fsl_uart.o [1]
+  .rodata               const    0x80005920     0x8  fsl_uart.o [1]
+  .rodata               const    0x80005928     0x8  gpio_input_interrupt.o [1]
+  Initializer bytes     const    0x80005930     0x8  <for RW-1>
+  .rodata               const    0x80005938     0x4  board.o [1]
+  .rodata               const    0x8000593c     0x4  board.o [1]
+  .rodata               const    0x80005940     0x4  board.o [1]
+  .rodata               const    0x80005944     0x4  board.o [1]
+  .rodata               const    0x80005948     0x4  clock_config.o [1]
+  .rodata               const    0x8000594c     0x4  gpio_input_interrupt.o [1]
+  .text                 ro code  0x80005950     0x4  xreturnswi.o [6]
+  Initializer bytes     const    0x80005954   0x4a0  <for P2 s0>
+                               - 0x80005df4  0x3db4
+
+"P6-P7", part 1 of 2:                           0x8
+  RW                             0x80400000     0x8  <Block>
+    RW-1                         0x80400000     0x8  <Init block>
+      .data             inited   0x80400000     0x4  system_MCIMX6G2.o [1]
+      __DLIB_PERTHREAD  inited   0x80400004     0x4  errno.o [3]
+                               - 0x80400008     0x8
+
+"P6-P7", part 2 of 2:                         0x538
+  ZI                             0x80400008   0x538  <Block>
+    .bss                zero     0x80400008     0x4  fsl_clock.o [1]
+    .bss                zero     0x8040000c     0x4  fsl_clock.o [1]
+    .bss                zero     0x80400010     0x4  fsl_io.o [1]
+    .bss                zero     0x80400014    0x20  fsl_uart.o [1]
+    .bss                zero     0x80400034     0x4  fsl_uart.o [1]
+    .bss                zero     0x80400038   0x500  system_MCIMX6G2.o [1]
+    .bss                zero     0x80400538     0x4  system_MCIMX6G2.o [1]
+    .bss                zero     0x8040053c     0x1  gpio_input_interrupt.o [1]
+                               - 0x80400540   0x538
+
+"P9":                                         0x400
+  CSTACK                         0x807ff800   0x400  <Block>
+    CSTACK              uninit   0x807ff800   0x400  <Block tail>
+                               - 0x807ffc00   0x400
+
+"P10":                                        0x400
+  ISTACK                         0x807ffc00   0x400  <Block>
+    ISTACK              uninit   0x807ffc00   0x400  <Block tail>
+                               - 0x80800000   0x400
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init3)
+    2 destination ranges, total size 0x4535:
+          0x00900000  0x4000
+          0x80400008   0x535
+
+Copy (__iar_copy_init3)
+    1 source range, total size 0x8:
+          0x80005930     0x8
+    1 destination range, total size 0x8:
+          0x80400000     0x8
+
+Copy (__iar_copy_init3)
+    1 source range, total size 0x4a0:
+          0x80005954   0x4a0
+    1 destination range, total size 0x4a0:
+          0x00904000   0x4a0
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                  ro code  rw code  ro data  rw data
+    ------                  -------  -------  -------  -------
+C:\Users\lidong\Documents\GitHub\imx6ul\gpio\input_interrupt\iar\ddr_debug\obj: [1]
+    board.o                     912                16   16 384
+    clock_config.o              568               116
+    clock_config_ocram.o               1 184    1 184
+    fsl_clock.o                 660                16        8
+    fsl_common.o                 28                44
+    fsl_debug_console.o          88
+    fsl_gpio.o                  480               252
+    fsl_io.o                    144                          4
+    fsl_log.o                    80                92
+    fsl_str.o                 1 368
+    fsl_uart.o                1 524               528       36
+    gpio_input_interrupt.o      320               180        1
+    pin_mux.o                   208
+    startup_MCIMX6G2.o          260
+    system_MCIMX6G2.o         1 304                 4    1 288
+    ----------------------------------------------------------
+    Total:                    7 944    1 184    2 432   17 721
+
+command line: [2]
+    ----------------------------------------------------------
+    Total:
+
+dl7Sx_tln.a: [3]
+    errno.o                      12                 4        4
+    exit.o                        4
+    low_level_init.o              4
+    xtls.o                        2
+    ----------------------------------------------------------
+    Total:                       22                 4        4
+
+m7Sx_tlv.a: [4]
+    DblToI64.o                  122
+    I64ToDbl.o                   88
+    U32ToDbl.o                   14
+    fpinit.o                     40
+    modf.o                      192
+    pow.o                     1 116             1 056
+    xdint.o                     126
+    xdnorm.o                     68
+    xdscale.o                   272
+    xdtest.o                     70
+    xexp.o                      664
+    xlog.o                      170
+    ----------------------------------------------------------
+    Total:                    2 942             1 056
+
+rt7Sx_tl.a: [5]
+    ABImemclr4.o                  8
+    ABImemcpy.o                 176
+    ABImemset.o                 116
+    ABImemset48.o                56
+    I32DivMod.o                 380
+    I64DivMod.o                 304
+    I64DivZer.o                   4
+    IntDivZer.o                   4
+    cexit.o                      16
+    cmain.o                      44
+    copy_init3.o                 44
+    data_init.o                  48
+    strlen.o                     84
+    zero_init3.o                 64
+    ----------------------------------------------------------
+    Total:                    1 348
+
+sh7Sxs_l.a: [6]
+    exit.o                       20
+    xreturnswi.o                  4
+    ----------------------------------------------------------
+    Total:                       24
+
+    Gaps                          4
+    Linker created               16                64    2 304
+--------------------------------------------------------------
+    Grand Total:             12 300    1 184    3 556   20 029
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address    Size  Type      Object
+-----                      -------    ----  ----      ------
+.iar.init_table$$Base   0x800057ec           --   Gb  - Linker created -
+.iar.init_table$$Limit  0x8000582c           --   Gb  - Linker created -
+?main                   0x800056f0          Code  Gb  cmain.o [5]
+BOARD_BootClockGate     0x80004d31    0x30  Code  Lc  clock_config.o [1]
+BOARD_BootClockRUN      0x80004d61    0x84  Code  Gb  clock_config.o [1]
+BOARD_DebugConsoleSrcFreq
+                        0x800047c7    0x40  Code  Gb  board.o [1]
+BOARD_InitDebugConsole  0x80004807    0x18  Code  Gb  board.o [1]
+BOARD_InitMemory        0x80004661   0x166  Code  Gb  board.o [1]
+BOARD_InitPins          0x800051a1    0x84  Code  Gb  pin_mux.o [1]
+BOARD_SetRunClock       0x00904001   0x4a0  Code  Gb  clock_config_ocram.o [1]
+CAN1_DriverIRQHandler   0x80003d35     0x2  Code  Wk  system_MCIMX6G2.o [1]
+CAN2_DriverIRQHandler   0x80003d35     0x2  Code  Wk  system_MCIMX6G2.o [1]
+CLOCK_ControlGate       0x80004e51    0x4a  Code  Lc  fsl_gpio.o [1]
+CLOCK_ControlGate       0x80002041    0x50  Code  Lc  fsl_uart.o [1]
+CLOCK_DeinitAudioPll    0x8000490b     0xc  Code  Gb  fsl_clock.o [1]
+CLOCK_DeinitEnetPll     0x80004923     0xc  Code  Gb  fsl_clock.o [1]
+CLOCK_DeinitUsb2Pll     0x80004901     0xa  Code  Gb  fsl_clock.o [1]
+CLOCK_DeinitVideoPll    0x80004917     0xc  Code  Gb  fsl_clock.o [1]
+CLOCK_EnableClock       0x80004e9b    0x10  Code  Lc  fsl_gpio.o [1]
+CLOCK_EnableClock       0x80002091    0x10  Code  Lc  fsl_uart.o [1]
+CLOCK_GetDiv            0x80004621    0x2e  Code  Lc  board.o [1]
+CLOCK_GetMux            0x800045f9    0x28  Code  Lc  board.o [1]
+CLOCK_GetMux            0x80004c8b    0x28  Code  Lc  clock_config.o [1]
+CLOCK_GetOscFreq        0x8000464f    0x12  Code  Lc  board.o [1]
+CLOCK_GetOscFreq        0x800048cd    0x18  Code  Lc  fsl_clock.o [1]
+CLOCK_GetPllFreq        0x8000492f   0x1e2  Code  Gb  fsl_clock.o [1]
+CLOCK_InitArmPll        0x800048e5    0x1c  Code  Gb  fsl_clock.o [1]
+CLOCK_SetDiv            0x80004cb3    0x72  Code  Lc  clock_config.o [1]
+CLOCK_SetMux            0x80004c19    0x72  Code  Lc  clock_config.o [1]
+CLOCK_SetRtcXtalFreq    0x80004d2b     0x6  Code  Lc  clock_config.o [1]
+CLOCK_SetXtalFreq       0x80004d25     0x6  Code  Lc  clock_config.o [1]
+CSTACK$$Base            0x807ff800           --   Gb  - Linker created -
+CSTACK$$Limit           0x807ffc00           --   Gb  - Linker created -
+ConvertFloatRadixNumToString
+                        0x80002a9d   0x1b8  Code  Lc  fsl_str.o [1]
+ConvertRadixNumToString
+                        0x800029cd    0xcc  Code  Lc  fsl_str.o [1]
+DbgConsole_Init         0x80002781    0x20  Code  Gb  fsl_debug_console.o [1]
+DbgConsole_Printf       0x800027a1    0x38  Code  Gb  fsl_debug_console.o [1]
+ECSPI1_DriverIRQHandler
+                        0x80003d35     0x2  Code  Wk  system_MCIMX6G2.o [1]
+ECSPI2_DriverIRQHandler
+                        0x80003d35     0x2  Code  Wk  system_MCIMX6G2.o [1]
+ECSPI3_DriverIRQHandler
+                        0x80003d35     0x2  Code  Wk  system_MCIMX6G2.o [1]
+ECSPI4_DriverIRQHandler
+                        0x80003d35     0x2  Code  Wk  system_MCIMX6G2.o [1]
+ENET1_Driver1588IRQHandler
+                        0x80003d35     0x2  Code  Wk  system_MCIMX6G2.o [1]
+ENET1_DriverIRQHandler  0x80003d35     0x2  Code  Wk  system_MCIMX6G2.o [1]
+ENET2_Driver1588IRQHandler
+                        0x80003d35     0x2  Code  Wk  system_MCIMX6G2.o [1]
+ENET2_DriverIRQHandler  0x80003d35     0x2  Code  Wk  system_MCIMX6G2.o [1]
+EXAMPLE_GPIO_IRQHandler
+                        0x800050a5    0x14  Code  Gb  gpio_input_interrupt.o [1]
+EnableIRQ               0x8000505b    0x1c  Code  Lc  gpio_input_interrupt.o [1]
+GIC_EnableIRQ           0x80005037    0x24  Code  Lc  gpio_input_interrupt.o [1]
+GIC_Init                0x80003ce1    0x54  Code  Lc  system_MCIMX6G2.o [1]
+GPIO_ClearPinsInterruptFlags
+                        0x800050a1     0x4  Code  Lc  gpio_input_interrupt.o [1]
+GPIO_EnableInterrupts   0x80005099     0x8  Code  Lc  gpio_input_interrupt.o [1]
+GPIO_GetInstance        0x80004eab    0x30  Code  Lc  fsl_gpio.o [1]
+GPIO_PinInit            0x80004edb    0x54  Code  Gb  fsl_gpio.o [1]
+GPIO_ReadPinInput       0x80005077    0x22  Code  Lc  gpio_input_interrupt.o [1]
+GPIO_SetPinInterruptConfig
+                        0x80004f89    0xa8  Code  Gb  fsl_gpio.o [1]
+GPIO_WritePinOutput     0x80004f2f    0x38  Code  Gb  fsl_gpio.o [1]
+I2C1_DriverIRQHandler   0x80003d35     0x2  Code  Wk  system_MCIMX6G2.o [1]
+I2C2_DriverIRQHandler   0x80003d35     0x2  Code  Wk  system_MCIMX6G2.o [1]
+I2C3_DriverIRQHandler   0x80003d35     0x2  Code  Wk  system_MCIMX6G2.o [1]
+I2C4_DriverIRQHandler   0x80003d35     0x2  Code  Wk  system_MCIMX6G2.o [1]
+I2S1_DriverIRQHandler   0x80003d35     0x2  Code  Wk  system_MCIMX6G2.o [1]
+I2S2_DriverIRQHandler   0x80003d35     0x2  Code  Wk  system_MCIMX6G2.o [1]
+I2S3_Rx_DriverIRQHandler
+                        0x80003d35     0x2  Code  Wk  system_MCIMX6G2.o [1]
+I2S3_Tx_DriverIRQHandler
+                        0x80003d35     0x2  Code  Wk  system_MCIMX6G2.o [1]
+IOMUXC_SetPinConfig     0x80005191    0x10  Code  Lc  pin_mux.o [1]
+IOMUXC_SetPinMux        0x80005171    0x20  Code  Lc  pin_mux.o [1]
+IO_Init                 0x80002f51    0x32  Code  Gb  fsl_io.o [1]
+IO_Transmit             0x80002f83    0x16  Code  Gb  fsl_io.o [1]
+ISTACK$$Base            0x807ffc00           --   Gb  - Linker created -
+ISTACK$$Limit           0x80800000           --   Gb  - Linker created -
+L1C_InvalidateDataCacheAll
+                        0x80003cd7     0xa  Code  Lc  system_MCIMX6G2.o [1]
+L1C_InvalidateInstructionCacheAll
+                        0x80003bcf    0x16  Code  Lc  system_MCIMX6G2.o [1]
+L1C_OpDataCacheAll      0x80003be5    0xf2  Code  Lc  system_MCIMX6G2.o [1]
+LOG_Init                0x80002959    0x18  Code  Gb  fsl_log.o [1]
+LOG_Print               0x80002971    0x2e  Code  Gb  fsl_log.o [1]
+MMU_ConfigSection       0x8000451d    0xb0  Code  Lc  board.o [1]
+MMU_Enable              0x800045dd    0x1c  Code  Lc  board.o [1]
+MMU_Init                0x800044e7    0x36  Code  Lc  board.o [1]
+MMU_InvalidateTLB       0x800045cd    0x10  Code  Lc  board.o [1]
+MMU_L1Table             0x00900000  0x4000  Data  Lc  board.o [1]
+NonCacheable$$Base      0x00000000           --   Gb  - Linker created -
+NonCacheable$$Length    0x00000000           --   Gb  - Linker created -
+PrintfPaddingCharacter  0x800029b1    0x1c  Code  Lc  fsl_str.o [1]
+RSTACK$$Base            0x0091ff00           --   Gb  - Linker created -
+RSTACK$$Limit           0x00920000           --   Gb  - Linker created -
+RW$$Base                0x80400000           --   Gb  - Linker created -
+RW$$Limit               0x80400008           --   Gb  - Linker created -
+Region$$Table$$Base     0x800057ec           --   Gb  - Linker created -
+Region$$Table$$Limit    0x8000582c           --   Gb  - Linker created -
+SDMA_DriverIRQHandler   0x80003d35     0x2  Code  Wk  system_MCIMX6G2.o [1]
+StrFormatPrintf         0x80002c5d   0x2ac  Code  Gb  fsl_str.o [1]
+SystemCoreClock         0x80400000     0x4  Data  Gb  system_MCIMX6G2.o [1]
+SystemCoreClockUpdate   0x80003d9d    0xbc  Code  Gb  system_MCIMX6G2.o [1]
+SystemInit              0x80003d37    0x66  Code  Gb  system_MCIMX6G2.o [1]
+SystemInitIrqTable      0x80003e59   0x13e  Code  Gb  system_MCIMX6G2.o [1]
+SystemInstallIrqHandler
+                        0x80003f97    0x14  Code  Gb  system_MCIMX6G2.o [1]
+SystemIrqHandler        0x8000405d    0x4c  Code  Wk  system_MCIMX6G2.o [1]
+UART1_DriverIRQHandler  0x80002589    0x10  Code  Gb  fsl_uart.o [1]
+UART2_DriverIRQHandler  0x80002599    0x10  Code  Gb  fsl_uart.o [1]
+UART3_DriverIRQHandler  0x800025a9    0x10  Code  Gb  fsl_uart.o [1]
+UART4_DriverIRQHandler  0x800025b9    0x10  Code  Gb  fsl_uart.o [1]
+UART5_DriverIRQHandler  0x800025c9    0x10  Code  Gb  fsl_uart.o [1]
+UART6_DriverIRQHandler  0x800025d9    0x10  Code  Gb  fsl_uart.o [1]
+UART7_DriverIRQHandler  0x800025e9    0x10  Code  Gb  fsl_uart.o [1]
+UART8_DriverIRQHandler  0x800025f9    0x10  Code  Gb  fsl_uart.o [1]
+UART_Disable            0x800020c5     0xe  Code  Lc  fsl_uart.o [1]
+UART_Enable             0x800020b7     0xe  Code  Lc  fsl_uart.o [1]
+UART_EnableAutoBaudRate
+                        0x8000214d    0x2e  Code  Lc  fsl_uart.o [1]
+UART_EnableRx           0x80002f2f    0x22  Code  Lc  fsl_io.o [1]
+UART_EnableTx           0x80002f0d    0x22  Code  Lc  fsl_io.o [1]
+UART_GetDefaultConfig   0x800022cf    0x44  Code  Gb  fsl_uart.o [1]
+UART_GetInstance        0x8000217b    0x38  Code  Gb  fsl_uart.o [1]
+UART_Init               0x800021b3   0x11c  Code  Gb  fsl_uart.o [1]
+UART_SetBaudRate        0x80002313   0x202  Code  Gb  fsl_uart.o [1]
+UART_SetRxFifoWatermark
+                        0x80002117    0x36  Code  Lc  fsl_uart.o [1]
+UART_SetTxFifoWatermark
+                        0x800020d9    0x3e  Code  Lc  fsl_uart.o [1]
+UART_SoftwareReset      0x800020a1    0x16  Code  Lc  fsl_uart.o [1]
+UART_WriteBlocking      0x80002515    0x3c  Code  Gb  fsl_uart.o [1]
+UART_WriteByte          0x800020d3     0x6  Code  Lc  fsl_uart.o [1]
+USDHC1_DriverIRQHandler
+                        0x80003d35     0x2  Code  Wk  system_MCIMX6G2.o [1]
+USDHC2_DriverIRQHandler
+                        0x80003d35     0x2  Code  Wk  system_MCIMX6G2.o [1]
+ZI$$Base                0x80400008           --   Gb  - Linker created -
+ZI$$Limit               0x80400540           --   Gb  - Linker created -
+__VECTOR_TABLE {Abs}    0x80002000          Data  Gb  command line/config [2]
+__aeabi_assert          0x80002635    0x18  Code  Gb  fsl_common.o [1]
+__aeabi_d2lz            0x800034f1          Code  Gb  DblToI64.o [4]
+__aeabi_errno_addr      0x800036db     0xc  Code  Gb  errno.o [3]
+__aeabi_idiv0           0x80002f08          Code  Gb  IntDivZer.o [5]
+__aeabi_l2d             0x8000356d          Code  Gb  I64ToDbl.o [4]
+__aeabi_ldiv0           0x80002954          Code  Gb  I64DivZer.o [5]
+__aeabi_memclr4         0x800029a8          Code  Gb  ABImemclr4.o [5]
+__aeabi_memcpy4         0x80004b60          Code  Gb  ABImemcpy.o [5]
+__aeabi_memcpy8         0x80004b60          Code  Gb  ABImemcpy.o [5]
+__aeabi_memset          0x80004858          Code  Gb  ABImemset.o [5]
+__aeabi_ui2d            0x80003a29     0xe  Code  Gb  U32ToDbl.o [4]
+__aeabi_uidiv           0x800027d8          Code  Gb  I32DivMod.o [5]
+__aeabi_uidivmod        0x800027d8          Code  Gb  I32DivMod.o [5]
+__aeabi_uldivmod        0x80002650          Code  Gb  I64DivMod.o [5]
+__cmain                 0x800056f0          Code  Gb  cmain.o [5]
+__exit                  0x8000572d    0x14  Code  Gb  exit.o [6]
+__get_ACTLR             0x80003bab     0x6  Code  Lc  system_MCIMX6G2.o [1]
+__get_CBAR              0x80005031     0x6  Code  Lc  gpio_input_interrupt.o [1]
+__get_CBAR              0x80003bc9     0x6  Code  Lc  system_MCIMX6G2.o [1]
+__get_CPACR             0x80003bb7     0x6  Code  Lc  system_MCIMX6G2.o [1]
+__get_FPEXC             0x80003b91     0x8  Code  Lc  system_MCIMX6G2.o [1]
+__get_SCTLR             0x800044c9     0x6  Code  Lc  board.o [1]
+__get_SCTLR             0x80003b9f     0x6  Code  Lc  system_MCIMX6G2.o [1]
+__iar_Dint              0x8000365d    0x7e  Code  Gb  xdint.o [4]
+__iar_Dnorm             0x80003619    0x44  Code  Gb  xdnorm.o [4]
+__iar_Dscale            0x80003a7f   0x110  Code  Gb  xdscale.o [4]
+__iar_Dtest             0x80003a39    0x36  Code  Gb  xdtest.o [4]
+__iar_Errno             0x80400004     0x4  Data  Gb  errno.o [3]
+__iar_Exp               0x80003791   0x292  Code  Gb  xexp.o [4]
+__iar_Logpoly           0x800036e7    0xaa  Code  Gb  xlog.o [4]
+__iar_Memset            0x80004858          Code  Gb  ABImemset.o [5]
+__iar_Memset4_word      0x80002f9c          Code  Gb  ABImemset48.o [5]
+__iar_Memset8_word      0x80002f9c          Code  Gb  ABImemset48.o [5]
+__iar_Memset_word       0x80004860          Code  Gb  ABImemset.o [5]
+__iar_copy_init3        0x80005751    0x2c  Code  Gb  copy_init3.o [5]
+__iar_data_init3        0x80005695    0x30  Code  Gb  data_init.o [5]
+__iar_dlib_perthread_access
+                        0x80003a37     0x2  Code  Gb  xtls.o [3]
+__iar_init_vfp          0x80005790          Code  Gb  fpinit.o [4]
+__iar_init_vfp_v6       0x8000577c          Code  Gb  fpinit.o [4]
+__iar_modf              0x80002fed          Code  Gb  modf.o [4]
+__iar_modfl             0x80002fed          Code  Gb  modf.o [4]
+__iar_program_start     0x8000531c          Code  Gb  startup_MCIMX6G2.o [1]
+__iar_return_from_swi   0x80005950     0x4  Code  Gb  xreturnswi.o [6]
+__iar_ul2d              0x80003589          Code  Gb  I64ToDbl.o [4]
+__iar_zero_init3        0x80005625    0x40  Code  Gb  zero_init3.o [5]
+__low_level_init        0x8000571d     0x4  Code  Gb  low_level_init.o [3]
+__set_ACTLR             0x80003bb1     0x6  Code  Lc  system_MCIMX6G2.o [1]
+__set_CPACR             0x80003bbd     0x6  Code  Lc  system_MCIMX6G2.o [1]
+__set_DACR              0x800044e1     0x6  Code  Lc  board.o [1]
+__set_FPEXC             0x80003b99     0x6  Code  Lc  system_MCIMX6G2.o [1]
+__set_SCTLR             0x800044cf     0x6  Code  Lc  board.o [1]
+__set_SCTLR             0x80003ba5     0x6  Code  Lc  system_MCIMX6G2.o [1]
+__set_TTBCR             0x800044db     0x6  Code  Lc  board.o [1]
+__set_TTBR0             0x800044d5     0x6  Code  Lc  board.o [1]
+__set_VBAR              0x80003bc3     0x6  Code  Lc  system_MCIMX6G2.o [1]
+__vector_table          0x80002000          Data  Gb  startup_MCIMX6G2.o [1]
+_call_main              0x80005704          Code  Gb  cmain.o [5]
+_exit                   0x80005740          Code  Gb  cexit.o [5]
+_main                   0x8000570c          Code  Gb  cmain.o [5]
+defaultIrqHandler       0x80003d35     0x2  Code  Lc  system_MCIMX6G2.o [1]
+delay                   0x80005127    0x20  Code  Lc  gpio_input_interrupt.o [1]
+exit                    0x80005729     0x4  Code  Gb  exit.o [3]
+g_InputSignal           0x8040053c     0x1  Data  Gb  gpio_input_interrupt.o [1]
+g_ccmConfigArmPll       0x80005948     0x4  Data  Gb  clock_config.o [1]
+g_rtcXtalFreq           0x8040000c     0x4  Data  Gb  fsl_clock.o [1]
+g_xtalFreq              0x80400008     0x4  Data  Gb  fsl_clock.o [1]
+internal_Pow            0x80003095   0x450  Code  Lc  pow.o [4]
+irqNesting              0x80400538     0x4  Data  Lc  system_MCIMX6G2.o [1]
+irqTable                0x80400038   0x500  Data  Lc  system_MCIMX6G2.o [1]
+lnbias                  0x800040a8   0x420  Data  Lc  pow.o [4]
+main                    0x800050b9    0x6e  Code  Gb  gpio_input_interrupt.o [1]
+modf                    0x80002fd5          Code  Gb  modf.o [4]
+modfl                   0x80002fd5          Code  Gb  modf.o [4]
+pow                     0x800034ed     0x4  Code  Gb  pow.o [4]
+s_debugConsoleIO        0x80400010     0x4  Data  Lc  fsl_io.o [1]
+s_gpioBases             0x80005868    0x18  Data  Lc  fsl_gpio.o [1]
+s_gpioClock             0x800058e8     0xc  Data  Lc  fsl_gpio.o [1]
+s_mmuBufferAttr         0x80005944     0x4  Data  Lc  board.o [1]
+s_mmuDevAttr            0x80005938     0x4  Data  Lc  board.o [1]
+s_mmuRamAttr            0x80005940     0x4  Data  Lc  board.o [1]
+s_mmuRomAttr            0x8000593c     0x4  Data  Lc  board.o [1]
+s_uartBases             0x800057c8    0x24  Data  Lc  fsl_uart.o [1]
+s_uartClock             0x80005898    0x14  Data  Lc  fsl_uart.o [1]
+s_uartHandle            0x80400014    0x20  Data  Lc  fsl_uart.o [1]
+s_uartIsr               0x80400034     0x4  Data  Lc  fsl_uart.o [1]
+strlen                  0x800035c4          Code  Gb  strlen.o [5]
+
+
+[1] = C:\Users\lidong\Documents\GitHub\imx6ul\gpio\input_interrupt\iar\ddr_debug\obj
+[2] = command line
+[3] = dl7Sx_tln.a
+[4] = m7Sx_tlv.a
+[5] = rt7Sx_tl.a
+[6] = sh7Sxs_l.a
+
+  12 300 bytes of readonly  code memory
+   1 184 bytes of readwrite code memory
+   3 556 bytes of readonly  data memory
+  20 029 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
