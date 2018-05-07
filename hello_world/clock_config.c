@@ -49,7 +49,7 @@ extern uint32_t SystemCoreClock;
  ******************************************************************************/
 static void BOARD_BootClockGate(void)
 {
-    /* 关闭未使用的外设时钟 */
+    /* Disable all unused peripheral clock */
     CCM->CCGR0 = 0x00C0000FU;
     CCM->CCGR1 = 0xF00C0000U;
     CCM->CCGR2 = 0x003FC030U;
@@ -61,7 +61,7 @@ static void BOARD_BootClockGate(void)
 
 void BOARD_BootClockRUN(void)
 {
-    /* Boot ROM初始化XTAL，这里我们只设置外部XTAL OSC频率 */
+    /* Boot ROM did initialize the XTAL, here we only sets external XTAL OSC freq */
     CLOCK_SetXtalFreq(24000000U);
     CLOCK_SetRtcXtalFreq(32768U);
 

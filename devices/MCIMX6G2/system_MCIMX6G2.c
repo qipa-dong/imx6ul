@@ -1,9 +1,11 @@
 /*
 ** ###################################################################
-**     Processors:          MCIMX6G3CVK05
-**                          MCIMX6G3CVM05
-**                          MCIMX6G3DVK05
-**                          MCIMX6G3DVM05
+**     Processors:          MCIMX6G2AVM05
+**                          MCIMX6G2AVM07
+**                          MCIMX6G2CVK05
+**                          MCIMX6G2CVM05
+**                          MCIMX6G2DVK05
+**                          MCIMX6G2DVM05
 **
 **     Compilers:           Keil ARM C/C++ Compiler
 **                          GNU C Compiler
@@ -58,10 +60,10 @@
 */
 
 /*!
- * @file MCIMX6G3
+ * @file MCIMX6G2
  * @version 2.0
  * @date 2017-03-27
- * @brief Device specific configuration file for MCIMX6G3 (implementation file)
+ * @brief Device specific configuration file for MCIMX6G2 (implementation file)
  *
  * Provides a system configuration function and a global variable that contains
  * the system frequency. It configures the device and initializes the oscillator
@@ -132,36 +134,6 @@ extern void SDMA_DriverIRQHandler (uint32_t giccIar, void *userParam);
 #pragma weak USDHC1_DriverIRQHandler=defaultIrqHandler
 #pragma weak USDHC2_DriverIRQHandler=defaultIrqHandler
 #pragma weak SDMA_DriverIRQHandler=defaultIrqHandler
-#elif defined(__GNUC__)
-void CAN1_DriverIRQHandler() __attribute__((weak, alias("defaultIrqHandler")));
-void CAN2_DriverIRQHandler() __attribute__((weak, alias("defaultIrqHandler")));
-void ECSPI1_DriverIRQHandler() __attribute__((weak, alias("defaultIrqHandler")));
-void ECSPI2_DriverIRQHandler() __attribute__((weak, alias("defaultIrqHandler")));
-void ECSPI3_DriverIRQHandler() __attribute__((weak, alias("defaultIrqHandler")));
-void ECSPI4_DriverIRQHandler() __attribute__((weak, alias("defaultIrqHandler")));
-void ENET1_DriverIRQHandler() __attribute__((weak, alias("defaultIrqHandler")));
-void ENET2_DriverIRQHandler() __attribute__((weak, alias("defaultIrqHandler")));
-void ENET1_Driver1588IRQHandler() __attribute__((weak, alias("defaultIrqHandler")));
-void ENET2_Driver1588IRQHandler() __attribute__((weak, alias("defaultIrqHandler")));
-void I2C1_DriverIRQHandler() __attribute__((weak, alias("defaultIrqHandler")));
-void I2C2_DriverIRQHandler() __attribute__((weak, alias("defaultIrqHandler")));
-void I2C3_DriverIRQHandler() __attribute__((weak, alias("defaultIrqHandler")));
-void I2C4_DriverIRQHandler() __attribute__((weak, alias("defaultIrqHandler")));
-void I2S1_DriverIRQHandler() __attribute__((weak, alias("defaultIrqHandler")));
-void I2S2_DriverIRQHandler() __attribute__((weak, alias("defaultIrqHandler")));
-void I2S3_Tx_DriverIRQHandler() __attribute__((weak, alias("defaultIrqHandler")));
-void I2S3_Rx_DriverIRQHandler() __attribute__((weak, alias("defaultIrqHandler")));
-void UART1_DriverIRQHandler() __attribute__((weak, alias("defaultIrqHandler")));
-void UART2_DriverIRQHandler() __attribute__((weak, alias("defaultIrqHandler")));
-void UART3_DriverIRQHandler() __attribute__((weak, alias("defaultIrqHandler")));
-void UART4_DriverIRQHandler() __attribute__((weak, alias("defaultIrqHandler")));
-void UART5_DriverIRQHandler() __attribute__((weak, alias("defaultIrqHandler")));
-void UART6_DriverIRQHandler() __attribute__((weak, alias("defaultIrqHandler")));
-void UART7_DriverIRQHandler() __attribute__((weak, alias("defaultIrqHandler")));
-void UART8_DriverIRQHandler() __attribute__((weak, alias("defaultIrqHandler")));
-void USDHC1_DriverIRQHandler() __attribute__((weak, alias("defaultIrqHandler")));
-void USDHC2_DriverIRQHandler() __attribute__((weak, alias("defaultIrqHandler")));
-void SDMA_DriverIRQHandler() __attribute__((weak, alias("defaultIrqHandler")));
 #else
   #error Not supported compiler type
 #endif
@@ -348,7 +320,7 @@ void SystemInstallIrqHandler(IRQn_Type irq, system_irq_handler_t handler, void *
 #pragma weak SystemIrqHandler
 void SystemIrqHandler(uint32_t giccIar) {
 #elif defined(__GNUC__)
-__attribute__((weak)) void SystemIrqHandler(uint32_t giccIar) {
+void SystemIrqHandler(uint32_t giccIar) __attribute__((weak)) {
 #else
   #error Not supported compiler type
 #endif

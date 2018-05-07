@@ -1,11 +1,6 @@
 /*
 ** ###################################################################
-**     Processors:          MCIMX6G2AVM05
-**                          MCIMX6G2CVK05
-**                          MCIMX6G2CVM05
-**                          MCIMX6G2DVK05
-**                          MCIMX6G2DVM05
-**
+**     Processor:           MCIMX6G2AVM07
 **     Compiler:            IAR ANSI C/C++ Compiler for ARM
 **     Reference manual:    IMX6ULRM, Rev. B, 4/2016
 **     Version:             rev. 1.0, 2017-03-09
@@ -52,14 +47,14 @@
 define symbol m_ocram_start            = 0x00900000;
 define symbol m_ocram_end              = 0x0091FFFF;
 
-define symbol m_interrupts_start       = 0x81002000;
-define symbol m_interrupts_end         = 0x8100203F;
+define symbol m_interrupts_start       = 0x80002000;
+define symbol m_interrupts_end         = 0x8000203F;
 
-define symbol m_text_start             = 0x81002040;
-define symbol m_text_end               = 0x813FFFFF;
+define symbol m_text_start             = 0x80002040;
+define symbol m_text_end               = 0x803FFFFF;
 
-define symbol m_data_start             = 0x81400000;
-define symbol m_data_end               = 0x817FFFFF;
+define symbol m_data_start             = 0x80400000;
+define symbol m_data_end               = 0x807FFFFF;
 
 /* Sizes */
 if (isdefinedsymbol(__resume_stack_size__)) {

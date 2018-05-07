@@ -39,6 +39,7 @@
 
 #if defined(__ICCARM__)
 #include <stddef.h>
+#include <intrinsics.h>
 #endif
 
 #include "fsl_device_registers.h"

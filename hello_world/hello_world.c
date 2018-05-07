@@ -51,19 +51,23 @@
  */
 int main(void)
 {
-    char ch;
+//    char ch;
+    int num;
 
-    /* 板级硬件初始化. */
-    BOARD_InitPins();       //引脚初始化
-    BOARD_BootClockRUN();   //时钟初始化
-    BOARD_InitMemory();     //内存初始化
-    BOARD_InitDebugConsole();//dubug串口初始化
+    /* Init board hardware. */
+    BOARD_InitPins();
+    BOARD_BootClockRUN();
+    BOARD_InitMemory();
+    BOARD_InitDebugConsole();
 
     PRINTF("hello world.\r\n");
 
     while (1)
     {
-        ch = GETCHAR();
-        PUTCHAR(ch);
+        //ch = GETCHAR();
+        //PUTCHAR(ch);
+        PRINTF("hello dong.\r\n");
+        num =10000;
+        while(num--);
     }
 }

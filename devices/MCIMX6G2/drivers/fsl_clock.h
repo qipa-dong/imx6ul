@@ -38,7 +38,7 @@
 #include <assert.h>
 
 /*!
- * @add to group clock
+ * @addtogroup clock
  * @{
  */
 
