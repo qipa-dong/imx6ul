@@ -102,11 +102,11 @@ void BOARD_InitMemory(void)
     MMU_ConfigSection(MMU_L1Table, (const void *)0x02100000U, 0x02100000U, &s_mmuDevAttr); /* AIPS-2 */
     MMU_ConfigSection(MMU_L1Table, (const void *)0x02200000U, 0x02200000U, &s_mmuDevAttr); /* AIPS-3 */
 
-    for (i = 0; i < 32; i++)
-    {
-        MMU_ConfigSection(MMU_L1Table, (const void *)(0x0C000000U + (i << 20)), (0x0C000000U + (i << 20)),
-                          &s_mmuDevAttr); /* QSPI Rx Buf */
-    }
+    // for (i = 0; i < 32; i++)
+    // {
+    //     MMU_ConfigSection(MMU_L1Table, (const void *)(0x0C000000U + (i << 20)), (0x0C000000U + (i << 20)),
+    //                       &s_mmuDevAttr); /* QSPI Rx Buf */
+    // }
 
     for (i = 0; i < 256; i++)
     {
@@ -114,11 +114,11 @@ void BOARD_InitMemory(void)
                           &s_mmuRamAttr); /* EIM */
     }
 
-    for (i = 0; i < 256; i++)
-    {
-        MMU_ConfigSection(MMU_L1Table, (const void *)(0x60000000U + (i << 20)), (0x60000000U + (i << 20)),
-                          &s_mmuRomAttr); /* QSPI */
-    }
+    // for (i = 0; i < 256; i++)
+    // {
+    //     MMU_ConfigSection(MMU_L1Table, (const void *)(0x60000000U + (i << 20)), (0x60000000U + (i << 20)),
+    //                       &s_mmuRomAttr); /* QSPI */
+    // }
 
     for (i = 0; i < 2048; i++)
     {
@@ -126,7 +126,7 @@ void BOARD_InitMemory(void)
                           &s_mmuRamAttr); /* DDR */
     }
 
-/* You can place global or static variables in NonCacheable section to make it uncacheable.*/
+/* 您可以将全局变量或静态变量放置在NonCacheable部分以使其不可缓存.*/
 #if defined(__ICCARM__)
 #pragma section = "NonCacheable"
     uint32_t ncahceStart = (uint32_t)__section_begin("NonCacheable");
@@ -150,13 +150,12 @@ void BOARD_InitMemory(void)
     MMU_Enable();
 }
 
-/* Get debug console frequency. */
+/* 获取调试控制台频率. */
 uint32_t BOARD_DebugConsoleSrcFreq(void)
 {
     uint32_t freq;
 
-    /* To make it simple, we assume default PLL and divider settings, and the only variable
-       from application is use PLL3 source or OSC source */
+    /* 为了简单起见，我们假定默认的PLL和分频器设置，并且来自应用程序的唯一变量是使用PLL3源或OSC源 */
     if (CLOCK_GetMux(kCLOCK_UartMux) == 0) /* PLL3 div6 80M */
     {
         freq = (CLOCK_GetPllFreq(kCLOCK_PllUsb1) / 6U) / (CLOCK_GetDiv(kCLOCK_UartDiv) + 1U);
@@ -177,9 +176,9 @@ void BOARD_InitDebugConsole(void)
     uartClkSrcFreq = BOARD_DebugConsoleSrcFreq();
 
 #ifdef FSL_RTOS_FREE_RTOS
-    GIC_SetPriority(BOARD_UART_IRQ, 25);
+    GIC_SetPriority(BOARD_UART_IRQ, 25);//中断优先级？
 #endif
-
+    //UART1,115200,imx6,clock
     DbgConsole_Init(BOARD_DEBUG_UART_BASEADDR, BOARD_DEBUG_UART_BAUDRATE, BOARD_DEBUG_UART_TYPE, uartClkSrcFreq);
 }
 
@@ -191,6 +190,7 @@ void Delay(uint32_t ticks)
     }
 }
 
+//我的板子好像没这玩意儿
 /* Set parallel pins output value of 74LV595 */
 void BOARD_NXP74LV595_SetValue(NXP74LV595_parOutputPins_t pin, NXP74LV595_signal_t value)
 {

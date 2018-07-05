@@ -32,11 +32,11 @@
                 </option>
                 <option>
                     <name>Input description</name>
-                    <state>No specifier n, no float nor long long, no scan set, no assignment suppressing.</state>
+                    <state>No specifier n, no float nor long long, no scan set, no assignment suppressing, without multibyte support.</state>
                 </option>
                 <option>
                     <name>Output description</name>
-                    <state>No specifier a, A, no specifier n, no float nor long long.</state>
+                    <state>No specifier a, A, no specifier n, no float nor long long, without multibyte support.</state>
                 </option>
                 <option>
                     <name>GOutputBinary</name>
@@ -215,7 +215,7 @@
                 <debug>1</debug>
                 <option>
                     <name>CCDefines</name>
-                    <state>CPU_MCIMX6G2DVM05</state>
+                    <state>CPU_MCIMX6G2CVM05</state>
                     <state>PRINTF_FLOAT_ENABLE=0</state>
                     <state>SCANF_FLOAT_ENABLE=0</state>
                     <state>PRINTF_ADVANCED_ENABLE=0</state>

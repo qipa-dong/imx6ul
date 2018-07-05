@@ -45,10 +45,7 @@
         {
             "name": "Win32",
             "includePath": [
-                "C:/Program Files (x86)/Windows Kits/8.1/Include/um",
-                "C:/Program Files (x86)/Windows Kits/8.1/Include/shared",
-                "C:/Program Files (x86)/Windows Kits/8.1/Include/winrt",
-                "D:/Program Files (x86)/IAR Systems/Embedded Workbench 7.5/arm/inc/c",
+                "D:/Program Files (x86)/IAR Systems/Embedded Workbench 8.0/arm/inc/c",
                 "${workspaceRoot}",
                 "${workspaceRoot}/CORTEXA/Include",
                 "${workspaceRoot}/devices/MCIMX6G2",
@@ -65,10 +62,7 @@
             "intelliSenseMode": "msvc-x64",
             "browse": {
                 "path": [
-                    "C:/Program Files (x86)/Windows Kits/8.1/Include/um",
-                    "C:/Program Files (x86)/Windows Kits/8.1/Include/shared",
-                    "C:/Program Files (x86)/Windows Kits/8.1/Include/winrt",
-                    "D:/Program Files (x86)/IAR Systems/Embedded Workbench 7.5/arm/inc/c",
+                    "D:/Program Files (x86)/IAR Systems/Embedded Workbench 8.0/arm/inc/c",
                     "${workspaceRoot}"
                 ],
                 "limitSymbolsToIncludedHeaders": true,
@@ -80,7 +74,7 @@
         {
             "name": "gcc",
             "includePath": [
-                "D:/Program Files (x86)/IAR Systems/Embedded Workbench 7.5/arm/inc/c",
+                "D:/Program Files (x86)/IAR Systems/Embedded Workbench 8.0/arm/inc/c",
                 "${workspaceRoot}",
                 "${workspaceRoot}/CORTEXA/Include",
                 "${workspaceRoot}/devices/MCIMX6G2",
@@ -93,7 +87,7 @@
             "intelliSenseMode": "msvc-x64",
             "browse": {
                 "path": [
-                    "D:/Program Files (x86)/IAR Systems/Embedded Workbench 7.5/arm/inc/c",
+                    "D:/Program Files (x86)/IAR Systems/Embedded Workbench 8.0/arm/inc/c",
                     "${workspaceRoot}"
                 ],
                 "limitSymbolsToIncludedHeaders": true,
@@ -101,5 +95,5 @@
             }
         }
     ],
-    "version": 3
+    "version": 4
 }

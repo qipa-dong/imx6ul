@@ -51,7 +51,7 @@
  */
 int main(void)
 {
-//    char ch;
+    char ch;
     int num;
 
     /* Init board hardware. */
